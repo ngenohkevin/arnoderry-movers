@@ -1,5 +1,5 @@
 import styles from "../style.js";
-import {discount} from "../assets/index.js";
+import {discount, relocation} from "../assets/index.js";
 import GetStarted from "./GetStarted.jsx";
 
 
@@ -13,22 +13,41 @@ const Hero = () => (
                         className="w-[32px] h-[32px]"
                     />
                     <p className={`${styles.paragraph} ml-2`}>
-                        <span className="text-white">20%</span>
-                        Discount For {" "}
-                        <span className="text-white">1 Month</span>
-                        Account
+                        {/*<span className="text-white">20%</span>*/}
+                        Movers for {" "}
+                        {/*<span className="text-white">1 Month</span>*/}
+                        Home and Office
                     </p>
                 </div>
                 <div className="flex flex-row justify-between items-center w-full">
-                    <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
-                        The Next <br className="sm:block hidden"/> {" "}
-                        <span className='text-gradient'>Generation</span> {" "}
-                        Payment Method.
+                    <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px] text-gradient">
+                        Arnoderry <br className="sm:block hidden "/> {" "}
+                        <span className='text-gradient'>Movers</span> {" "}
                     </h1>
                     <div className="ss:flex hidden md:mr-4 mr-0">
                         <GetStarted/>
                     </div>
                 </div>
+                <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full">
+                    Moving Your World...
+                </h1>
+                <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+                    We provide seamless and stress-free relocation services at an affordable rate.
+                    We specialize in helping individuals and businesses move their offices and homes within the Eldoret area,
+                    With a dedicated team of professionals.
+                </p>
+            </div>
+            <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
+                <img src={relocation}
+                     alt="people relocating"
+                     className="w-[100%] h-[100%] relative z-[5]"
+                />
+                <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient"/>
+                <div className="absolute z-[1] w-[80%] h-[80%] rounded-full bottom-40 white__gradient"/>
+                <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient"/>
+            </div>
+            <div className={`ss:hidden ${styles.flexCenter}`}>
+                <GetStarted/>
             </div>
         </section>
     );
