@@ -1,4 +1,19 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import {
+    people01,
+    quote,
+    people02,
+    people03,
+    facebook,
+    call,
+    instagram,
+    linkedin,
+    twitter,
+    airbnb,
+    binance,
+    coinbase,
+    dropbox,
+    shipping
+} from "../assets";
 
 export const navLinks = [
     {
@@ -10,8 +25,8 @@ export const navLinks = [
         title: "Features",
     },
     {
-        id: "product",
-        title: "Product",
+        id: "free-quote",
+        title: "Free Quote",
     },
     {
         id: "clients",
@@ -22,24 +37,26 @@ export const navLinks = [
 export const features = [
     {
         id: "feature-1",
-        icon: star,
-        title: "Rewards",
+        icon: call,
+        title: "Request a quote",
         content:
-            "The best credit cards offer some tantalizing combinations of promotions and prizes",
+            "Provide us with your moving/relocation by filling " +
+            "the free quote form, giving us a call or texting us on whatsapp",
     },
     {
         id: "feature-2",
-        icon: shield,
-        title: "100% Secured",
+        icon: quote,
+        title: "We send you a Quote",
         content:
-            "We take proactive steps make sure your information and transactions are secure.",
+            "We will send you a free quote depending on the specifications " +
+            "you have provided.",
     },
     {
         id: "feature-3",
-        icon: send,
-        title: "Balance Transfer",
+        icon: shipping,
+        title: "We get you settled",
         content:
-            "A balance transfer credit card can save you a lot of money in interest charges.",
+            "After the price agreement, We provide seamless moving/relocation stress-free.",
     },
 ];
 
@@ -73,18 +90,18 @@ export const feedback = [
 export const stats = [
     {
         id: "stats-1",
-        title: "User Active",
-        value: "3800+",
+        title: "Users Served",
+        value: "100+",
     },
     {
         id: "stats-2",
-        title: "Trusted by Company",
-        value: "230+",
+        title: "Trusted by Companies",
+        value: "20+",
     },
     {
         id: "stats-3",
-        title: "Transaction",
-        value: "$230M+",
+        title: "Completed Relocations",
+        value: "150+",
     },
 ];
 
