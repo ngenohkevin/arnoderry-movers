@@ -1,11 +1,10 @@
-import React from 'react';
+import {layout} from "../style.js";
 
-const Billing = () => {
-    return (
-        <div>
-            Billing
-        </div>
-    );
-};
+const Billing = () => (
+    <section id="free-quote" className={layout.section}>
+        Billing
+    </section>
+);
+
 
 export default Billing;
