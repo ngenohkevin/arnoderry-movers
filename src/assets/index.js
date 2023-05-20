@@ -25,6 +25,9 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 import relocation from "./relocation.png"
 import arn_logo from "./arn_logo.png"
+import call from "./call.svg"
+import quote from "./quote.svg"
+import shipping from "./shipping.svg"
 
 export {
   airbnb,
@@ -53,5 +56,8 @@ export {
   people02,
   people03,
   relocation,
-  arn_logo
+  arn_logo,
+  call,
+  quote,
+    shipping
 };
