@@ -25,12 +25,12 @@ export const navLinks = [
         title: "Features",
     },
     {
-        id: "free-quote",
-        title: "Free Quote",
-    },
-    {
         id: "services",
         title: "Services",
+    },
+    {
+        id: "free-quote",
+        title: "Free Quote",
     },
 ];
 
