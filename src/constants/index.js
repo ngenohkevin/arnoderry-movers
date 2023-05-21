@@ -29,8 +29,8 @@ export const navLinks = [
         title: "Free Quote",
     },
     {
-        id: "clients",
-        title: "Clients",
+        id: "services",
+        title: "Services",
     },
 ];
 
