@@ -1,7 +1,7 @@
 import styles, { layout } from '../style.js';
 import { useState } from 'react';
 
-const Billing = () => {
+const FreeQuote = () => {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
