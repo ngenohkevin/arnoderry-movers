@@ -5,8 +5,6 @@ import {
     Hero,
     Navbar,
     Stats,
-    Testimonials,
-    Clients,
     Services,
 } from "./components";
 import styles from "./style.js";
