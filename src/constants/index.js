@@ -12,7 +12,8 @@ import {
     binance,
     coinbase,
     dropbox,
-    shipping
+    shipping,
+    cleaning, whatsapp
 } from "../assets";
 
 export const navLinks = [
@@ -32,6 +33,37 @@ export const navLinks = [
         id: "services",
         title: "Services",
     },
+    // {
+    //     id: "cleaning",
+    //     title: "Cleaning",
+    // },
+];
+
+export const service = [
+    {
+        id: "service-1",
+        icon: shipping,
+        title: "Moving",
+        content:
+            "We offer a comprehensive range of services in the moving business, " +
+            "designed to make your relocation experience seamless and stress-free",
+    },
+    {
+        id: "service-2",
+        icon: cleaning,
+        title: "Cleaning Services",
+        content:
+            "In Addition to moving, through our subsidiary company " +
+            "we also provide cleaning services for both home and office including:" +
+            " carpet cleaning, sofa set cleaning, House keeping and lawn mowing services",
+    },
+    // {
+    //     id: "service-3",
+    //     icon: shipping,
+    //     title: "We get you settled",
+    //     content:
+    //         "After the price agreement, We provide seamless moving/relocation stress-free.",
+    // },
 ];
 
 export const features = [
@@ -58,6 +90,32 @@ export const features = [
         content:
             "After the price agreement, We provide seamless moving/relocation stress-free.",
     },
+];
+
+export const contact = [
+    {
+        id: "call1",
+        icon: call,
+        title: "Call Us:",
+        content:
+            "+254799228645",
+    },
+    {
+        id: "email1",
+        icon: call,
+        title: "Email Us:",
+        content:
+            "peridyl@pm.me",
+
+    },
+    {
+        id: "whatsapp1",
+        icon: whatsapp,
+        title: "Whatsapp us:",
+        content:
+        "0799228645"
+
+    }
 ];
 
 export const feedback = [
