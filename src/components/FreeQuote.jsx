@@ -185,4 +185,4 @@ const FreeQuote = () => {
     );
 };
 
-export default Billing;
+export default FreeQuote;
