@@ -1,10 +1,10 @@
-import {features} from "../constants/index.js";
 import styles, {layout} from "../style.js";
-
+import {services} from "../assets/index.js";
+import {service} from "../constants/index.js";
 
 // eslint-disable-next-line react/prop-types
-const FeatureCard = ({icon, title, content, index}) => (
-    <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} feature-card`}>
+const ServiceCard = ({icon, title, content, index}) => (
+    <div className={`flex flex-row p-6 rounded-[20px] ${index !== service.length - 1 ? "mb-6" : "mb-0"} feature-card`}>
         <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
             <img src={icon} alt="icon" className="w-[50%] h-[50%] object-contain"/>
         </div>
@@ -18,30 +18,26 @@ const FeatureCard = ({icon, title, content, index}) => (
         </div>
     </div>
 )
-
-const CardDeal = () => (
-    <section id="services" className={layout.section}>
+const Services = () => (
+    <section id="services" className={layout.sectionReverse}>
+        <div className={layout.sectionImgReverse}>
+            <img alt="services"
+                 src={services}
+                 className="w-[100%] h-[100%] relative z-[5]"
+            />
+            <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient"/>
+            <div className="absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full pink__gradient"/>
+        </div>
         <div className={layout.sectionInfo}>
-            <h2 className={styles.heading2}>
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                You relax , <br className="sm:block hidden"/> We'll
-                handle the moving.
-            </h2>
-            <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-                Our experienced team ensures efficient packing, safe transportation,
-                and timely delivery of your belongings.
-                Trust us to take care of every aspect of your relocation journey.
-            </p>
-            {/*<Button styles={`mt-10`} id="home"/>*/}
+            <h2 className={`${styles.heading2} ml-3`}>The Services We Offer.</h2>
+            <div className={`${layout.sectionImg} flex-col`}>
+                {service.map((service, index) => (
+                    <ServiceCard key={service.id} {...service} index={index}/>
+                ))}
+            </div>
         </div>
-        <div className={`${layout.sectionImg} flex-col`}>
-            {features.map((feature, index) => (
-                <FeatureCard key={feature.id} {...feature} index={index}/>
-            ))}
-        </div>
-
     </section>
 );
 
 
-export default CardDeal;
+export default Services;
