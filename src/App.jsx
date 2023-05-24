@@ -1,5 +1,16 @@
-import {Billing, Business, CardDeal, CTA, Footer, Hero, Navbar, Stats, Testimonials, Clients} from "./components";
+import {
+    Business,
+    CTA,
+    Footer,
+    Hero,
+    Navbar,
+    Stats,
+    Testimonials,
+    Clients,
+    Services,
+} from "./components";
 import styles from "./style.js";
+import FreeQuote from "./components/FreeQuote.jsx";
 
 
 const App = () => (
@@ -21,10 +32,12 @@ const App = () => (
             <div className={`${styles.boxWidth}`}>
                 <Stats/>
                 <Business/>
-                <Billing/>
-                <CardDeal/>
-                <Testimonials/>
-                <Clients/>
+                <FreeQuote/>
+                <Services/>
+                {/*<Cleaning/>*/}
+                {/*<CarouselSection/>*/}
+                {/*<Testimonials/>*/}
+                {/*<Clients/>*/}
                 <CTA/>
                 <Footer/>
             </div>
