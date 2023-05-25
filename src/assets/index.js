@@ -30,10 +30,9 @@ import quote from "./quote.svg"
 import shipping from "./shipping.svg"
 import services from "./services.png"
 import cleaning from "./cleaning.svg"
+import tiktok from "./tiktok.svg"
+import youtube from "./youtube.svg"
 import whatsapp from "./whatsapp.svg"
-import move1 from "./move1.jpeg"
-import move2 from "./move2.jpeg"
-import move3 from "./move3.jpeg"
 
 
 export {
@@ -69,8 +68,7 @@ export {
   shipping,
   services,
   cleaning,
-  whatsapp,
-  move1,
-  move2,
-  move3
+  tiktok,
+  youtube,
+  whatsapp
 };
