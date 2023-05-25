@@ -6,14 +6,12 @@ import {
     facebook,
     call,
     instagram,
-    linkedin,
-    twitter,
     airbnb,
     binance,
     coinbase,
     dropbox,
     shipping,
-    cleaning, whatsapp
+    cleaning, send, tiktok, youtube, whatsapp
 } from "../assets";
 
 export const navLinks = [
@@ -97,24 +95,22 @@ export const contact = [
         id: "call1",
         icon: call,
         title: "Call Us:",
-        content:
-            "+254799228645",
+        content: "+254799228645",
+        type: "phone",
     },
     {
         id: "email1",
-        icon: call,
+        icon: send,
         title: "Email Us:",
-        content:
-            "peridyl@pm.me",
-
+        content: "peridyl@pm.me",
+        type: "email",
     },
     {
         id: "whatsapp1",
         icon: whatsapp,
-        title: "Whatsapp us:",
-        content:
-        "0799228645"
-
+        title: "WhatsApp Us:",
+        content: "+254799228645",
+        type: "whatsapp",
     }
 ];
 
@@ -165,23 +161,23 @@ export const stats = [
 
 export const footerLinks = [
     {
-        title: "Useful Links",
+        title: "Our Socials",
         links: [
             {
-                name: "Content",
-                link: "https://www.hoobank.com/content/",
+                name: "Instagram",
+                link: "https://www.instagram.com/crazy_kennar/",
             },
             {
-                name: "How it Works",
-                link: "https://www.hoobank.com/how-it-works/",
+                name: "Tiktok",
+                link: "https://www.tiktok.com/@zachking",
             },
             {
-                name: "Create",
+                name: "Facebook",
                 link: "https://www.hoobank.com/create/",
             },
             {
-                name: "Explore",
-                link: "https://www.hoobank.com/explore/",
+                name: "Youtube",
+                link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
             },
             {
                 name: "Terms & Services",
@@ -242,14 +238,19 @@ export const socialMedia = [
     },
     {
         id: "social-media-3",
-        icon: twitter,
-        link: "https://www.twitter.com/",
+        icon: tiktok,
+        link: "https://www.tiktok.com/",
     },
     {
         id: "social-media-4",
-        icon: linkedin,
-        link: "https://www.linkedin.com/",
+        icon: youtube,
+        link: "https://www.youtube.com/",
     },
+    {
+        id: "social-media-5",
+        icon: whatsapp,
+        link: "https://wa.me/+25799228645/",
+    }
 ];
 
 export const clients = [
