@@ -14,9 +14,9 @@ const Hero = () => (
                     />
                     <p className={`${styles.paragraph} ml-2`}>
                         {/*<span className="text-white">20%</span>*/}
-                        Movers for {" "}
+                        Movers and {" "}
                         {/*<span className="text-white">1 Month</span>*/}
-                        Home and Office
+                        Cleaning Services
                     </p>
                 </div>
                 <div className="flex flex-row justify-between items-center w-full">
