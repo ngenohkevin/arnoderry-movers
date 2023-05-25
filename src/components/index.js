@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import Cleaning from "./Cleaning.jsx"
-import CarouselSection from "./CarouselSection.jsx"
+// import CarouselSection from "./CarouselSection.jsx"
 
 export {
     Navbar,
@@ -23,5 +23,5 @@ export {
     Testimonials,
     Hero,
     Cleaning,
-    CarouselSection
+    // CarouselSection
 };
