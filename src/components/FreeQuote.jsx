@@ -1,6 +1,7 @@
 import styles, { layout } from '../style.js';
 import { useState } from 'react';
 import * as emails from "emailjs-com";
+import {Notification} from "./index.js";
 
 const FreeQuote = () => {
     const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ const FreeQuote = () => {
         staffCount: '',
         cleaningServices: false,
     });
+
+    const [notification, setNotification] = useState(null);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -36,7 +39,7 @@ const FreeQuote = () => {
 
         emails.sendForm('service_zumzfiu', 'template_1td39pt', e.target, 'tzIhrXkkZ6tOtGAi4')
             .then(() => {
-                console.log('Email sent successfully');
+                setNotification({ message: 'Free Quote sent successfully!!', type: 'success', timeout: 6000 });
                 setFormData({
                     fullName: '',
                     email: '',
@@ -49,9 +52,11 @@ const FreeQuote = () => {
                     staffCount: '',
                     cleaningServices: false,
                 });
+
             })
             .catch((error) => {
                 console.error('Failed to send email', error);
+                setNotification({ message: 'Failed to send email', type: 'error', timeout: 6000 });
             });
     };
 
@@ -196,6 +201,7 @@ const FreeQuote = () => {
                         </button>
                     </div>
                 </form>
+                {notification && <Notification message={notification.message} type={notification.type} timeout={notification.timeout} />}
             </div>
         </section>
     );
