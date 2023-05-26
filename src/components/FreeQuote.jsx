@@ -1,5 +1,6 @@
 import styles, { layout } from '../style.js';
 import { useState } from 'react';
+import * as emails from "emailjs-com";
 
 const FreeQuote = () => {
     const [formData, setFormData] = useState({
@@ -23,23 +24,38 @@ const FreeQuote = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission
-        console.log(formData);
 
-        // Reset form fields
-        setFormData({
-            fullName: '',
-            email: '',
-            phone: '',
-            movingTo: '',
-            movingFrom: '',
-            movingDate: '',
-            moveType: 'house',
-            bedrooms: '1',
-            staffCount: '',
-            cleaningServices: false,
-        });
+        // Check if any required fields are empty
+        const requiredFields = ['fullName', 'email', 'phone', 'movingTo', 'movingFrom', 'movingDate'];
+        const hasEmptyField = requiredFields.some((field) => !formData[field]);
+
+        if (hasEmptyField) {
+            console.log('Please fill in all required fields');
+            return;
+        }
+
+        emails.sendForm('service_zumzfiu', 'template_1td39pt', e.target, 'tzIhrXkkZ6tOtGAi4')
+            .then(() => {
+                console.log('Email sent successfully');
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    phone: '',
+                    movingTo: '',
+                    movingFrom: '',
+                    movingDate: '',
+                    moveType: 'house',
+                    bedrooms: '',
+                    staffCount: '',
+                    cleaningServices: false,
+                });
+            })
+            .catch((error) => {
+                console.error('Failed to send email', error);
+            });
     };
+
+
 
 
     return (
