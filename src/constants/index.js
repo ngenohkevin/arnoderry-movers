@@ -6,7 +6,6 @@ import {
     facebook,
     call,
     instagram,
-    binance,
     shipping,
     cleaning, send, tiktok, youtube, whatsapp
 } from "../assets";
