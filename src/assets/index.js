@@ -1,9 +1,5 @@
-
 import bill from "./bill.png";
 import binance from "./binance.png";
-import card from "./card.png";
-import coinbase from "./coinbase.png";
-import logo from "./logo.svg";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
 import send from "./Send.svg";
@@ -36,9 +32,6 @@ import whatsapp from "./whatsapp.svg"
 export {
   bill,
   binance,
-  card,
-  coinbase,
-  logo,
   quotes,
   robot,
   send,
