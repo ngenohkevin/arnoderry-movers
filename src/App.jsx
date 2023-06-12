@@ -9,6 +9,7 @@ import {
 } from "./components";
 import styles from "./style.js";
 import FreeQuote from "./components/FreeQuote.jsx";
+import CarouselSection from "./components/CarouselSection.jsx";
 
 
 const App = () => (
@@ -33,7 +34,7 @@ const App = () => (
                 <FreeQuote/>
                 <Services/>
                 {/*<Cleaning/>*/}
-                {/*<CarouselSection/>*/}
+                <CarouselSection/>
                 {/*<Testimonials/>*/}
                 {/*<Clients/>*/}
                 <CTA/>
