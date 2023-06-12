@@ -27,6 +27,15 @@ import cleaning from "./cleaning.svg"
 import tiktok from "./tiktok.svg"
 import youtube from "./youtube.svg"
 import whatsapp from "./whatsapp.svg"
+import move1 from "./move1.png"
+import move2 from "./move2.png"
+import move3 from "./move3.png"
+import move4 from "./move4.jpeg"
+import move5 from "./move5.jpeg"
+import move6 from "./move6.jpeg"
+import move7 from "./move7.jpeg"
+import move8 from "./move8.jpeg"
+
 
 
 export {
@@ -58,5 +67,13 @@ export {
   cleaning,
   tiktok,
   youtube,
-  whatsapp
+  whatsapp,
+    move1,
+    move2,
+    move3,
+    move4,
+    move5,
+    move6,
+    move7,
+    move8,
 };
