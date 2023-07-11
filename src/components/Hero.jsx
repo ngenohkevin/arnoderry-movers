@@ -34,7 +34,7 @@ const Hero = () => (
                 </h1>
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
                     We provide seamless and stress-free relocation services at an affordable rate.
-                    We specialize in helping individuals and businesses move their offices and homes within the Eldoret area,
+                    We specialize in helping individuals and businesses move their offices and homes,
                     With a dedicated team of professionals.
                 </p>
             </div>
