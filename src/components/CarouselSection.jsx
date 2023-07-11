@@ -3,7 +3,7 @@ import styles, {layout} from "../style.js";
 import { RxDotFilled } from "react-icons/rx";
 import { useState } from "react";
 import {move1, move2, move3, move4, move5, move6, move7, move8} from "../assets/index.js";
-import {service} from "../constants/index.js";
+// import {service} from "../constants/index.js";
 
 
 const CarouselSection = () => {
