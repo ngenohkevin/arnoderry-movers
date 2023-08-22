@@ -36,9 +36,10 @@ const CarouselSection = () => {
                 {/*    packing, shower installation, tv mounting, cleaning...*/}
                 {/*</h2>*/}
                 <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-                    Our experienced team ensures efficient packing, safe transportation,
-                    and timely delivery of your belongings.
-                    Trust us to take care of every aspect of your relocation journey.
+                <h2 className={styles.heading2}> Rely on Our Expertise!</h2>
+                With our seasoned team at the helm, you can count on us for efficient packing, 
+                secure transportation, and punctual delivery of your cherished belongings. 
+                Entrust us with every facet of your relocation process and experience a journey defined by professionalism and care.
                 </p>
                 {/*<Button styles={`mt-10`} id="home"/>*/}
             </div>
