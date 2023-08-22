@@ -16,8 +16,8 @@ export const navLinks = [
         title: "Home",
     },
     {
-        id: "features",
-        title: "Features",
+        id: "journey",
+        title: "Journey",
     },
     {
         id: "free-quote",
@@ -67,25 +67,28 @@ export const features = [
     {
         id: "feature-1",
         icon: call,
-        title: "Request a quote",
+        title: "Get Your Quote Today",
         content:
-            "Provide us with your moving/relocation by filling " +
-            "the free quote form, giving us a call or texting us on whatsapp",
+            "Obtain a personalized quote for your moving or relocation needs by completing our free quote form. " +
+            "Alternatively, feel free to give us a call or send us a message on WhatsApp."+ 
+            "We're here to make your transition as easy as possible.",
     },
     {
         id: "feature-2",
         icon: quote,
-        title: "We send you a Quote",
+        title: "Your Personalized Quote Awaits",
         content:
-            "We will send you a free quote depending on the specifications " +
-            "you have provided.",
+            "Based on the details you've shared, anticipate receiving a complimentary, "+
+            "tailored quote from us. Your specific needs guide our pricing,"+ 
+            "ensuring you get the best value for the services you require.",
     },
     {
         id: "feature-3",
         icon: shipping,
-        title: "We get you settled",
+        title: "Your Settlement, Our Mission",
         content:
-            "After the price agreement, We provide seamless moving/relocation stress-free.",
+            "Once we've agreed upon the pricing, consider your move or relocation stress a thing of the past."+
+            "Our seamless and hassle-free services are designed to provide you with a smooth transition and a newfound sense of settlement..",
     },
 ];
 
