@@ -47,17 +47,20 @@ export const service = [
         icon: cleaning,
         title: "Cleaning Services",
         content:
-            "In Addition to moving, through our subsidiary company " +
-            "we also provide cleaning services for both home and office including:" +
+            "Our comprehensive cleaning services are tailored to meet your specific needs. " +
+            "Experience the satisfaction of a perfectly organized and flawlessly clean living "+ 
+            "space with our integrated house moving and cleaning services including:" +
             " carpet cleaning, sofa set cleaning, House keeping and lawn mowing services",
     },
-    // {
-    //     id: "service-3",
-    //     icon: shipping,
-    //     title: "We get you settled",
-    //     content:
-    //         "After the price agreement, We provide seamless moving/relocation stress-free.",
-    // },
+    {
+        id: "service-3",
+        icon: shipping,
+        title: "We get you settled",
+        content:
+            "Our skilled team works closely with you to create personalized layouts that reflect your style " +
+            "and preferences while optimizing the use of space." + 
+            "Whether it's arranging furniture, setting up rooms, or finding the perfect spot for each item.",
+    },
 ];
 
 export const features = [
@@ -91,7 +94,15 @@ export const contact = [
         id: "call1",
         icon: call,
         title: "Call Us:",
-        content: "+254799228645",
+        content: "+254700570533",
+        content2: "+254741995348",
+        type: "phone",
+    },
+    {
+        id: "call2",
+        icon: call,
+        title: "OR",
+        content: "+254741995348",
         type: "phone",
     },
     {
@@ -105,7 +116,7 @@ export const contact = [
         id: "whatsapp1",
         icon: whatsapp,
         title: "WhatsApp Us:",
-        content: "+254799228645",
+        content: "0741995348",
         type: "whatsapp",
     }
 ];
@@ -245,7 +256,7 @@ export const socialMedia = [
     {
         id: "social-media-5",
         icon: whatsapp,
-        link: "https://wa.me/+25799228645/",
+        link: "https://wa.me/0741995348/",
     }
 ];
 
