@@ -94,15 +94,14 @@ export const contact = [
         id: "call1",
         icon: call,
         title: "Call Us:",
-        content: "+254700570533",
-        content2: "+254741995348",
+        content: "254700570533",
         type: "phone",
     },
     {
         id: "call2",
         icon: call,
         title: "OR",
-        content: "+254741995348",
+        content: "254741995348",
         type: "phone",
     },
     {
@@ -116,7 +115,7 @@ export const contact = [
         id: "whatsapp1",
         icon: whatsapp,
         title: "WhatsApp Us:",
-        content: "0741995348",
+        content: "254741995348",
         type: "whatsapp",
     }
 ];

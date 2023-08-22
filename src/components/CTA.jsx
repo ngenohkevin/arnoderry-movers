@@ -5,7 +5,7 @@ import {contact} from "../constants/index.js";
 const ContactCard = ({ icon, title, content, type, index }) => {
     const handleClick = () => {
         if (type === "phone") {
-            window.location.href = `tel:${content} te`;
+            window.location.href = `tel:${content}`;
         } else if (type === "email") {
             window.location.href = `mailto:${content}`;
         } else if (type === "whatsapp") {
