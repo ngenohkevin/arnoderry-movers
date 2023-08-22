@@ -44,9 +44,11 @@ const ContactCard = ({ icon, title, content, type, index }) => {
 const CTA = () => (
     <section className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}>
         <div className="flex-1 flex-col">
-            <h2 className={styles.heading2}>Contact Us!</h2>
+            <h2 className={styles.heading2}>Get in Touch with Us !</h2>
             <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-                Let us know your specific requirements. Contact us for cleaning services or moving services.
+            Share your unique requirements with us. 
+            Whether you`re looking for top-notch cleaning services or seamless moving assistance, 
+            we`re here to help. Reach out to us today and let`s transform your space together!
             </p>
         </div>
         <div className={layout.sectionInfo}>
