@@ -19,17 +19,17 @@ const FeatureCard = ({icon, title, content, index}) => (
     </div>
 )
 const Business = () => (
-    <section id="features" className={layout.section}>
+    <section id="journey" className={layout.section}>
         <div className={layout.sectionInfo}>
             <h2 className={styles.heading2}>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
-                You relax , <br className="sm:block hidden"/> We'll
-                handle the moving.
+                Unwind , <br className="sm:block hidden"/> and
+                Leave It to Us.
             </h2>
             <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-                Our experienced team ensures efficient packing, safe transportation,
-                and timely delivery of your belongings.
-                Trust us to take care of every aspect of your relocation journey.
+            Sit back and enjoy peace of mind while our capable team takes the reins. 
+            From proficient packing to secure transportation and punctual delivery, 
+            we`ve got it all covered. Entrust every aspect of your relocation journey to us with confidence.
             </p>
             {/*<Button styles={`mt-10`} id="home"/>*/}
         </div>
