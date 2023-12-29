@@ -154,17 +154,17 @@ export const stats = [
     {
         id: "stats-1",
         title: "Users Served",
-        value: "100+",
+        value: "200+",
     },
     {
         id: "stats-2",
         title: "Trusted by Companies",
-        value: "20+",
+        value: "30+",
     },
     {
         id: "stats-3",
         title: "Completed Relocations",
-        value: "150+",
+        value: "+",
     },
 ];
 
