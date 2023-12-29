@@ -164,7 +164,7 @@ export const stats = [
     {
         id: "stats-3",
         title: "Completed Relocations",
-        value: "+",
+        value: "+300",
     },
 ];
 
