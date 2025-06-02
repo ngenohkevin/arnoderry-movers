@@ -341,22 +341,22 @@ const FreeQuote = () => {
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             </button>
                             
-                            <button
-                                type="button"
-                                onClick={handleWhatsAppDirect}
-                                disabled={isWhatsAppButtonDisabled}
-                                className="flex-1 group relative overflow-hidden bg-green-600 hover:bg-green-700 
-                                    text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300
-                                    hover:scale-[1.02] hover:shadow-2xl hover:shadow-green-500/25
-                                    disabled:bg-gray-600 disabled:cursor-not-allowed disabled:hover:scale-100
-                                    focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:ring-offset-2 focus:ring-offset-gray-900
-                                    text-sm sm:text-base"
-                            >
-                                <span className="relative z-10 flex items-center justify-center space-x-2">
-                                    <span>💬</span>
-                                    <span>Send via WhatsApp</span>
-                                </span>
-                            </button>
+                            {/*<button*/}
+                            {/*    type="button"*/}
+                            {/*    onClick={handleWhatsAppDirect}*/}
+                            {/*    disabled={isWhatsAppButtonDisabled}*/}
+                            {/*    className="flex-1 group relative overflow-hidden bg-green-600 hover:bg-green-700 */}
+                            {/*        text-white font-semibold py-3 px-6 rounded-2xl transition-all duration-300*/}
+                            {/*        hover:scale-[1.02] hover:shadow-2xl hover:shadow-green-500/25*/}
+                            {/*        disabled:bg-gray-600 disabled:cursor-not-allowed disabled:hover:scale-100*/}
+                            {/*        focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:ring-offset-2 focus:ring-offset-gray-900*/}
+                            {/*        text-sm sm:text-base"*/}
+                            {/*>*/}
+                            {/*    <span className="relative z-10 flex items-center justify-center space-x-2">*/}
+                            {/*        <span>💬</span>*/}
+                            {/*        <span>Send via WhatsApp</span>*/}
+                            {/*    </span>*/}
+                            {/*</button>*/}
                         </div>
 
                         {/* Help Text */}
