@@ -10,7 +10,7 @@ import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import Cleaning from "./Cleaning.jsx"
 import Notification from "./Notification.jsx"
-// import CarouselSection from "./CarouselSection.jsx"
+import Toast from "./Toast.jsx"
 
 export {
     Navbar,
@@ -24,6 +24,6 @@ export {
     Testimonials,
     Hero,
     Cleaning,
-    Notification
-    // CarouselSection
+    Notification,
+    Toast
 };

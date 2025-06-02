@@ -1,3 +1,4 @@
+/* Enhanced index.css with modern utilities and animations */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
 @tailwind base;
@@ -6,10 +7,16 @@
 
 :root {
   --black-gradient: linear-gradient(
-          144.39deg,
-          #ffffff -278.56%,
-          #6d6d6d -78.47%,
-          #11101d 91.61%
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --black-gradient-2: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
   );
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
@@ -18,15 +25,42 @@
   scroll-behavior: smooth;
 }
 
+/* Enhanced section scroll padding */
+section[id] {
+  scroll-margin-top: 8rem; /* 128px to account for navbar */
+}
+
+html {
+  scroll-padding-top: 8rem;
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
 .text-gradient {
   background: radial-gradient(
-          64.18% 64.18% at 71.16% 35.69%,
-          #def9fa 0.89%,
-          #bef3f5 17.23%,
-          #9dedf0 42.04%,
-          #7de7eb 55.12%,
-          #5ce1e6 71.54%,
-          #33bbcf 100%
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -36,39 +70,39 @@
 
 .bg-blue-gradient {
   background: linear-gradient(
-          157.81deg,
-          #def9fa -43.27%,
-          #bef3f5 -21.24%,
-          #9dedf0 12.19%,
-          #7de7eb 29.82%,
-          #5ce1e6 51.94%,
-          #33bbcf 90.29%
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
   );
 }
 
 .bg-black-gradient {
   background: linear-gradient(
-          144.39deg,
-          #ffffff -278.56%,
-          #6d6d6d -78.47%,
-          #11101d 91.61%
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
   );
 }
 
 .bg-black-gradient-2 {
   background: linear-gradient(
-          -168.39deg,
-          #ffffff -278.56%,
-          #6d6d6d -78.47%,
-          #11101d 91.61%
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
   );
 }
 
 .bg-gray-gradient {
   background: linear-gradient(
-          153.47deg,
-          rgba(255, 255, 255, 0) -341.94%,
-          #14101d 95.11%
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
   );
 }
 
@@ -77,7 +111,7 @@
 }
 
 .box-shadow {
-  box-shadow: 0 20px 100px -10px rgba(66, 71, 91, 0.1);
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
 
 .sidebar {
@@ -113,7 +147,7 @@
 }
 
 .feedback-container .feedback-card:last-child {
-  margin-right: 0;
+  margin-right: 0px;
 }
 
 .feedback-card {
@@ -137,4 +171,75 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+/* Modern Loading Animation */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Modern Focus States */
+.focus-modern:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  border-color: #3b82f6;
+}
+
+/* Enhanced Backdrop Blur */
+.backdrop-blur-modern {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Smooth Transitions */
+.transition-modern {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Gradients */
+.gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-success {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Glass Morphism Effect */
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
