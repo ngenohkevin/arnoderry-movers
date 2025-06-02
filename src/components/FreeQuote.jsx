@@ -92,21 +92,21 @@ const FreeQuote = () => {
         }
     };
 
-    const handleWhatsAppDirect = () => {
-        const requiredFields = ['movingTo', 'movingFrom', 'movingDate'];
-        const hasEmptyRequired = requiredFields.some((field) => !formData[field]);
+    // const handleWhatsAppDirect = () => {
+    //     const requiredFields = ['movingTo', 'movingFrom', 'movingDate'];
+    //     const hasEmptyRequired = requiredFields.some((field) => !formData[field]);
+    //
+    //     if (hasEmptyRequired) {
+    //         showToast('Please fill Moving To, Current Location, and Date before sending via WhatsApp', 'error');
+    //         return;
+    //     }
+    //
+    //     const whatsappLink = whatsappService.generateWhatsAppLink(formData);
+    //     window.open(whatsappLink, '_blank');
+    //     showToast('📱 Opening WhatsApp... Please send the pre-filled message to complete your quote request.', 'success');
+    // };
 
-        if (hasEmptyRequired) {
-            showToast('Please fill Moving To, Current Location, and Date before sending via WhatsApp', 'error');
-            return;
-        }
-
-        const whatsappLink = whatsappService.generateWhatsAppLink(formData);
-        window.open(whatsappLink, '_blank');
-        showToast('📱 Opening WhatsApp... Please send the pre-filled message to complete your quote request.', 'success');
-    };
-
-    const isWhatsAppButtonDisabled = !formData.movingTo || !formData.movingFrom || !formData.movingDate;
+    // const isWhatsAppButtonDisabled = !formData.movingTo || !formData.movingFrom || !formData.movingDate;
 
     return (
         <section id="free-quote" className={`${layout.section} scroll-mt-32 relative overflow-hidden`}>
