@@ -13,24 +13,17 @@ class TelegramService {
   async sendQuotation(formData) {
     const message = this.formatQuotationMessage(formData);
     
-    // Telegram message limit is 4096 characters
     if (message.length > 4096) {
       throw new Error(`Message too long: ${message.length} characters (limit: 4096)`);
     }
 
     const results = await this.sendToMultipleChats(message);
     
-    // Check if at least one message was sent successfully
     const successCount = results.filter(r => r.success).length;
     const failCount = results.filter(r => !r.success).length;
     
     if (successCount === 0) {
       throw new Error('Failed to send message to any recipient');
-    }
-    
-    console.log(`✅ Quotation sent to ${successCount} recipient(s)`);
-    if (failCount > 0) {
-      console.warn(`⚠️ Failed to send to ${failCount} recipient(s)`);
     }
     
     return { 
@@ -62,7 +55,6 @@ class TelegramService {
         const result = await response.json();
         
         if (!response.ok) {
-          console.error(`Failed to send to ${chatId}:`, result);
           return { 
             chatId, 
             success: false, 
@@ -76,7 +68,6 @@ class TelegramService {
           data: result 
         };
       } catch (error) {
-        console.error(`Error sending to ${chatId}:`, error);
         return { 
           chatId, 
           success: false, 
@@ -107,7 +98,6 @@ class TelegramService {
       ? `🏠 <b>${bedrooms} Bedroom House</b>`
       : `🏢 <b>Office (${staffCount} staff)</b>`;
 
-    // Clean phone number for WhatsApp link
     const cleanPhone = phone.replace(/[^0-9]/g, '');
     const whatsappPhone = cleanPhone.startsWith('254') ? cleanPhone : `254${cleanPhone.replace(/^0/, '')}`;
 
@@ -169,82 +159,8 @@ ${moveDetails}
       return { success: false, error: error.message };
     }
   }
-
-  async testMultipleMessages() {
-    try {
-      const testMessage = `🧪 <b>Test Message</b>
-
-This is a test message from Arnoderry Movers Quote System.
-
-Time: <code>${new Date().toLocaleString()}</code>
-Status: Testing Multi-User Telegram Bot Integration
-
-If you receive this message, your Telegram integration is working correctly! ✅`;
-
-      const results = await this.sendToMultipleChats(testMessage);
-      
-      const successCount = results.filter(r => r.success).length;
-      const failCount = results.filter(r => !r.success).length;
-      
-      return { 
-        success: successCount > 0, 
-        successCount, 
-        failCount, 
-        results 
-      };
-    } catch (error) {
-      return { success: false, error: error.message };
-    }
-  }
 }
 
 const telegramService = new TelegramService();
-
-// Make available for testing
-if (typeof window !== 'undefined') {
-  window.telegramService = telegramService;
-  
-  window.testTelegram = async () => {
-    console.log('🧪 Testing Telegram Bot connection...');
-    const result = await telegramService.testConnection();
-    console.log('Connection result:', result);
-    
-    if (result.success) {
-      console.log('✅ Telegram bot is connected!');
-      console.log('Bot info:', result.data.result);
-      
-      console.log(`🧪 Testing message sending to ${telegramService.chatIds.length} recipient(s)...`);
-      console.log('Recipients:', telegramService.chatIds);
-      
-      const messageResult = await telegramService.testMultipleMessages();
-      console.log('Message result:', messageResult);
-      
-      if (messageResult.success) {
-        console.log(`✅ Test messages sent! ${messageResult.successCount} successful, ${messageResult.failCount} failed`);
-        messageResult.results.forEach((result, index) => {
-          if (result.success) {
-            console.log(`✅ Recipient ${index + 1} (${result.chatId}): Success`);
-          } else {
-            console.log(`❌ Recipient ${index + 1} (${result.chatId}): ${result.error}`);
-          }
-        });
-      } else {
-        console.log('❌ Failed to send test messages');
-      }
-    } else {
-      console.log('❌ Telegram bot connection failed:', result.error);
-    }
-  };
-
-  window.showChatIds = () => {
-    console.log('📱 Current Telegram Recipients:');
-    telegramService.chatIds.forEach((chatId, index) => {
-      console.log(`${index + 1}. Chat ID: ${chatId}`);
-    });
-    console.log('');
-    console.log('💡 To add more recipients, update your .env file:');
-    console.log('VITE_TELEGRAM_CHAT_IDS=id1,id2,id3');
-  };
-}
 
 export default telegramService;
