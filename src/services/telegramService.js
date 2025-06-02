@@ -98,16 +98,19 @@ class TelegramService {
       ? `🏠 <b>${bedrooms} Bedroom House</b>`
       : `🏢 <b>Office (${staffCount} staff)</b>`;
 
+    const moveTypeText = moveType === 'house' ? 'HOUSE' : 'OFFICE';
+
+    // Clean phone number for WhatsApp and tel links
     const cleanPhone = phone.replace(/[^0-9]/g, '');
     const whatsappPhone = cleanPhone.startsWith('254') ? cleanPhone : `254${cleanPhone.replace(/^0/, '')}`;
+    const telPhone = phone.startsWith('+') ? phone : `+${whatsappPhone}`;
 
-    return `🚚 <b>NEW MOVING QUOTATION REQUEST</b>
+    return `🚚 <b>NEW ${moveTypeText} MOVING QUOTATION REQUEST FROM ${this.escapeHtml(fullName.toUpperCase())}</b>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📋 <b>SUBMISSION DETAILS</b>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📅 Date: <code>${timestamp}</code>
-🆔 ID: <code>${Date.now()}</code>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 👤 <b>CUSTOMER INFORMATION</b>
@@ -128,9 +131,9 @@ ${moveDetails}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📱 <b>QUICK ACTIONS</b>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-• Call: <a href="tel:${phone}">${this.escapeHtml(phone)}</a>
-• Email: <a href="mailto:${email}">${this.escapeHtml(email)}</a>
-• WhatsApp: <a href="https://wa.me/${whatsappPhone}">Send Message</a>
+<a href="tel:${telPhone}">📞 Call ${this.escapeHtml(phone)}</a>
+<a href="mailto:${email}">📧 Email ${this.escapeHtml(email)}</a>
+<a href="https://wa.me/${whatsappPhone}">💬 WhatsApp Message</a>
 
 🏢 <b>Arnoderry Movers</b> | New Quote Request`;
   }
