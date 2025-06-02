@@ -75,15 +75,15 @@ const CTA = () => {
             gradient: "from-blue-500/20 to-indigo-500/20",
             iconBg: "bg-gradient-to-br from-blue-500 to-indigo-500"
         },
-        {
-            id: "email1",
-            icon: HiMail,
-            title: "Email Us:",
-            content: "peridyl@pm.me",
-            type: "email",
-            gradient: "from-purple-500/20 to-pink-500/20",
-            iconBg: "bg-gradient-to-br from-purple-500 to-pink-500"
-        },
+        // {
+        //     id: "email1",
+        //     icon: HiMail,
+        //     title: "Email Us:",
+        //     content: "peridyl@pm.me",
+        //     type: "email",
+        //     gradient: "from-purple-500/20 to-pink-500/20",
+        //     iconBg: "bg-gradient-to-br from-purple-500 to-pink-500"
+        // },
         {
             id: "whatsapp1",
             icon: BsWhatsapp,
