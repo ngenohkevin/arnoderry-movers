@@ -86,7 +86,7 @@ const FreeQuote = () => {
             });
 
         } catch (error) {
-            showToast('❌ Failed to submit quote. Please try the WhatsApp option below or call us directly.', 'error');
+            showToast('❌ Failed to submit quote. Please call us directly.', 'error');
         } finally {
             setIsSubmitting(false);
         }
