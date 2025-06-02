@@ -18,10 +18,11 @@ class WhatsAppService {
   async submitQuoteRequest(formData) {
     try {
       await telegramService.sendQuotation(formData);
+      
       return { 
         success: true, 
         method: 'telegram',
-        message: 'Quote sent successfully'
+        message: 'Quote sent to Telegram successfully'
       };
     } catch (telegramError) {
       try {
