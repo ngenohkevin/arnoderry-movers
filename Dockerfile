@@ -21,11 +21,19 @@ FROM nginx:alpine
 # Copy built files from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Copy nginx configuration if it exists
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Create nginx config to listen on port 3000
+RUN echo 'server { \
+    listen 3000; \
+    location / { \
+        root /usr/share/nginx/html; \
+        index index.html index.htm; \
+        try_files $uri $uri/ /index.html; \
+    } \
+}' > /etc/nginx/conf.d/default.conf && \
+    rm -f /etc/nginx/conf.d/default.conf.bak
 
-# Expose port 80
-EXPOSE 80
+# Expose port 3000 to match dwebstore
+EXPOSE 3000
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
