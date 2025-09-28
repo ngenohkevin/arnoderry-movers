@@ -32,19 +32,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Vite application
+      - name: Test build locally
         run: |
+          echo "Testing build locally to catch errors early"
           npm run build
         env:
           NODE_ENV: production
-          VITE_TELEGRAM_BOT_TOKEN: ${{ secrets.VITE_TELEGRAM_BOT_TOKEN }}
-          VITE_TELEGRAM_CHAT_IDS: ${{ secrets.VITE_TELEGRAM_CHAT_IDS }}
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
-          VITE_EMAILJS_PRIVATE_KEY: ${{ secrets.VITE_EMAILJS_PRIVATE_KEY }}
-          VITE_NOTIFICATION_EMAIL: ${{ secrets.VITE_NOTIFICATION_EMAIL }}
-          VITE_BUSINESS_PHONE_NUMBER: ${{ secrets.VITE_BUSINESS_PHONE_NUMBER }}
 
       - name: Log in to GitHub Container Registry
         if: github.event_name != 'pull_request'
@@ -82,6 +75,15 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          build-args: |
+            VITE_TELEGRAM_BOT_TOKEN=${{ secrets.VITE_TELEGRAM_BOT_TOKEN }}
+            VITE_TELEGRAM_CHAT_IDS=${{ secrets.VITE_TELEGRAM_CHAT_IDS }}
+            VITE_EMAILJS_SERVICE_ID=${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+            VITE_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+            VITE_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+            VITE_EMAILJS_PRIVATE_KEY=${{ secrets.VITE_EMAILJS_PRIVATE_KEY }}
+            VITE_NOTIFICATION_EMAIL=${{ secrets.VITE_NOTIFICATION_EMAIL }}
+            VITE_BUSINESS_PHONE_NUMBER=${{ secrets.VITE_BUSINESS_PHONE_NUMBER }}
 
       - name: Deploy to Dokploy via Webhook
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
