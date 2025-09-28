@@ -37,6 +37,14 @@ jobs:
           npm run build
         env:
           NODE_ENV: production
+          VITE_TELEGRAM_BOT_TOKEN: ${{ secrets.VITE_TELEGRAM_BOT_TOKEN }}
+          VITE_TELEGRAM_CHAT_IDS: ${{ secrets.VITE_TELEGRAM_CHAT_IDS }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+          VITE_EMAILJS_PRIVATE_KEY: ${{ secrets.VITE_EMAILJS_PRIVATE_KEY }}
+          VITE_NOTIFICATION_EMAIL: ${{ secrets.VITE_NOTIFICATION_EMAIL }}
+          VITE_BUSINESS_PHONE_NUMBER: ${{ secrets.VITE_BUSINESS_PHONE_NUMBER }}
 
       - name: Log in to GitHub Container Registry
         if: github.event_name != 'pull_request'
